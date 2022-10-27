@@ -38,7 +38,7 @@ public class navController implements Initializable {
     }
 
     private void loadScene(String name, Object controller) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource(name));
         fxmlLoader.setController(controller);
         VBox lendReceivePane = fxmlLoader.load();
         layout.getChildren().add(lendReceivePane);
