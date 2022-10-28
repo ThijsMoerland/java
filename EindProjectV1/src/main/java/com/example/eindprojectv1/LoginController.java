@@ -3,7 +3,6 @@ package com.example.eindprojectv1;
 import com.example.eindprojectv1.Data.Database;
 import com.example.eindprojectv1.Model.User;
 import javafx.beans.property.StringProperty;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -66,7 +65,7 @@ public class LoginController {
         navController navController = new navController(db, user);
         fxmlLoader.setController(navController);
 
-        Scene scene = new Scene(fxmlLoader.load(), 600, 300);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
 
         Stage.setScene(scene);
     }

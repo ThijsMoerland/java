@@ -9,14 +9,14 @@ import java.time.LocalDateTime;
 
 public class Item {
     private int itemCode;
-    private int memberIdentifier;
-    private LocalDateTime lendDate;
     private boolean available;
     private String title;
+    private String Author;
+    private int memberIdentifier;
+    private LocalDateTime lendDate;
 
     public Item(int code ,String title) {
         this.itemCode = code;
-        this.memberIdentifier = 0;
         this.available = true;
         this.title = title;
     }
@@ -42,8 +42,8 @@ public class Item {
         return title;
     }
 
-    public int getItemCode() {
-        return itemCode;
+    public String getAuthor() {
+        return Author;
     }
 
     //setters
@@ -67,7 +67,7 @@ public class Item {
         this.title = title;
     }
 
-    public void setItemCode(int itemCode) {
-        this.itemCode = itemCode;
+    public void setAuthor(String author) {
+        Author = author;
     }
 }

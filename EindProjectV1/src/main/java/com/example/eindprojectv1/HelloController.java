@@ -25,15 +25,11 @@ import java.util.Date;
 
 public class HelloController {
     private User user;
-    private Database database;
     public HelloController(Database database, User user) {
-        this.database = database;
+        this.db = database;
         this.user = user;
     }
-    private Database db = new Database();
-    //gets the items from the database in a list
-    private ObservableList<Item> items = FXCollections.observableList(db.getItems());
-    private ObservableList<User> users = FXCollections.observableList(db.getUsers());
+    private Database db;
 
     @FXML
     Label welcomeLabel;
@@ -53,6 +49,8 @@ public class HelloController {
     @FXML
     Label receiveMessageLabel;
 
+
+
     public void lendItem(){
         int itemCode = Integer.parseInt(lendItemCode.getText());
         int memberCode = Integer.parseInt(memberID.getText());
@@ -65,6 +63,7 @@ public class HelloController {
             if(item.getAvailable()){
                 item.setAvailable(false);
                 item.setLendDate(LocalDateTime.now());
+                item.setMemberIdentifier(memberCode);
                 lendMessageLabel.setText("successfully lended item");
             }
             else
@@ -82,7 +81,7 @@ public class HelloController {
         if(db.getItemByID(itemCode) != null){
             item = db.getItemByID(itemCode);
 
-            if(!item.getAvailable()){
+            if(item.getAvailable() == false){
                 int daysLended = (int)Duration.between(item.getLendDate(), LocalDateTime.now()).toDays();
                 if (daysLended > 21) {
                     item.setAvailable(true);
