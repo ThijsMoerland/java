@@ -15,24 +15,24 @@
       <TableView id="table" fx:id="table" prefHeight="200.0" prefWidth="200.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Item Code">
-              <cellValueFactory>
-                  <PropertyValueFactory property="itemCode" />
-              </cellValueFactory>
+<!--              <cellValueFactory>-->
+<!--                  <PropertyValueFactory property="itemCode" />-->
+<!--              </cellValueFactory>-->
           </TableColumn>
           <TableColumn prefWidth="75.0" text="Available">
-              <cellValueFactory>
-                  <PropertyValueFactory property="available" />
-              </cellValueFactory>
+<!--              <cellValueFactory>-->
+<!--                  <PropertyValueFactory property="available" />-->
+<!--              </cellValueFactory>-->
           </TableColumn>
             <TableColumn prefWidth="300.0" text="Title">
-                <cellValueFactory>
-                    <PropertyValueFactory property="title" />
-                </cellValueFactory>
+<!--                <cellValueFactory>-->
+<!--                    <PropertyValueFactory property="title" />-->
+<!--                </cellValueFactory>-->
             </TableColumn>
             <TableColumn prefWidth="100.0" text="Author">
-                <cellValueFactory>
-                    <PropertyValueFactory property="author" />
-                </cellValueFactory>
+<!--                <cellValueFactory>-->
+<!--                    <PropertyValueFactory property="author" />-->
+<!--                </cellValueFactory>-->
             </TableColumn>
         </columns>
       </TableView>
