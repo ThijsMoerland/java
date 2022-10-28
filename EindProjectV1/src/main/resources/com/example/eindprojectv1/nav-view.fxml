@@ -2,15 +2,18 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox fx:id="layout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
-    <children>
-        <MenuBar >
-            <menus>
-                <Menu mnemonicParsing="false" text="Lending/Receiving" />
-                <Menu mnemonicParsing="false" text="Collection" />
-                <Menu mnemonicParsing="false" text="Members" />
-            </menus>
-        </MenuBar>
-    </children>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="7.0" layoutY="6.0" text="Library system" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="32.0" />
+         </font>
+      </Label>
+      <Button layoutX="464.0" layoutY="13.0" mnemonicParsing="false" onAction="#loadTicketView" style="-fx-background-color: darkgrey;" text="Collection" textFill="WHITE" />
+      <Button layoutX="534.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: darkgrey;" text="Members" textFill="WHITE" />
+      <Button layoutX="344.0" layoutY="12.0" mnemonicParsing="false" onAction="#loadLendingOrReceivingView" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: darkgrey;" text="Lending/Receiving" textFill="WHITE" />
+      <Pane fx:id="layout" layoutY="42.0" prefHeight="358.0" prefWidth="600.0" />
+   </children>
+</AnchorPane>
